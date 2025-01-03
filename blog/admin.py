@@ -4,6 +4,10 @@ from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
+    """
+    Lists fields for display in the admin panel, fields for search,
+    fields for filter, fields to be prepopulated and for the rich-text editor
+    """
 
     list_display = ('title', 'slug', 'status', 'created_on')
     search_fields = ['title','content']
