@@ -31,9 +31,7 @@ class PostList(generic.ListView):
 def post_detail(request, slug):
     """
     Display an individual :model:`blog.Post`.
-
     **Context**
-
     ``post``
         An instance of :model:`blog.Post`.
     ``comments``
@@ -42,9 +40,7 @@ def post_detail(request, slug):
         A count of approved comments related to the post.
     ``comment_form``
         An instance of :form:`blog.CommentForm`
-
     **Template:**
-
     :template:`blog/post_detail.html`
     """
     queryset = Post.objects.filter(status=1)
